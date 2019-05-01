@@ -6,13 +6,13 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/29 15:43:22 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/04/29 18:42:09 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/05/01 14:17:32 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnew(size_t size)
+char	*ft_strnew(size_t size)
 {
 	char	*ret;
 	size_t	i;
