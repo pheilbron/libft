@@ -6,7 +6,7 @@
 #    By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/30 13:56:22 by pheilbro          #+#    #+#              #
-#    Updated: 2019/07/28 09:26:08 by pheilbro         ###   ########.fr        #
+#    Updated: 2019/07/28 09:34:25 by pheilbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,6 @@ $(NAME): $(OBJS)
 	@echo Creating libft.a...
 	@$(AR) -rcs $@ $(OBJS)
 	@ranlib $(NAME)
-	@rm "__.SYMDEF SORTED"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@echo Compiling $<.
