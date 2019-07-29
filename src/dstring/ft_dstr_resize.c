@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 07:58:44 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 23:06:41 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/07/28 23:10:19 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_dstring	*ft_dstr_extend(t_dstring *s, size_t len)
 	t_dstring	*temp;
 
 	temp = ft_dstr_new(s->buf,
-			(s->pos < len ? s->pos : len), 
+			(s->pos < len ? s->pos : len),
 			(s->pos < len ? s->pos : len));
 	ft_dstr_free(s);
 	s = ft_dstr_new(temp->buf, temp->pos, len);
