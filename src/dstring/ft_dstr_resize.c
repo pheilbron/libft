@@ -6,19 +6,21 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 07:58:44 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 07:58:51 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/07/28 23:06:41 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_dstring.h"
 
-size_t	ft_dstr_extend(t_dstring *s, size_t len)
+t_dstring	*ft_dstr_extend(t_dstring *s, size_t len)
 {
-	t_dstring	temp;
+	t_dstring	*temp;
 
-	ft_dstr_new(&temp, s->buf, s->pos, s->pos);
-	ft_dstr_del(*s);
-	ft_dstr_new(s, temp.buf, temp.pos, len);
-	ft_dstr_del(temp);
-	return (s->cap);
+	temp = ft_dstr_new(s->buf,
+			(s->pos < len ? s->pos : len), 
+			(s->pos < len ? s->pos : len));
+	ft_dstr_free(s);
+	s = ft_dstr_new(temp->buf, temp->pos, len);
+	ft_dstr_free(temp);
+	return (s);
 }
