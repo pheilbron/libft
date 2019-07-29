@@ -1,24 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_vect_del.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 14:56:51 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 08:46:38 by pheilbro         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "ft_vector.h"
+#include "ft_string.h"
 
-size_t	ft_vect_del(t_vector *v)
+void	ft_vect_del(t_vector *v, int index)
 {
-	size_t	ret;
-
-	ret = v->pos;
-	if (v->data)
-		free(v->data);
-	free(v);
-	return (ret);
+	ft_memmove(v->data + index,
+			v->data + index + 1,
+			(v->pos - index - 1) * sizeof(size_t));
+	v->pos--;
+	if (v->pos <= v->cap / 4)
+		ft_vect_resize(v, v->cap / 4);
 }

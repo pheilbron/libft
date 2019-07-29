@@ -17,15 +17,18 @@
 
 typedef struct	s_vector
 {
-	char	*data;
-	size_t	size;
-	size_t	pos;
+	void	**data;
+	int		cap;
+	int		pos;
 }				t_vector;
 
-t_vector		*ft_vect_new(char *s, size_t len, size_t size);
-size_t			ft_vect_add(t_vector *v, char *s, size_t len);
-size_t			ft_vect_insert(t_vector *v, size_t pos, char *s, size_t len);
-size_t			ft_vect_extend(t_vector *v, size_t len);
-size_t			ft_vect_del(t_vector *v);
+t_vector		*ft_vect_init(t_vector *v, int capacity);
+t_vector		*ft_vect_new(int capacity);
+void			*ft_vect_add(t_vector *v, void *data);
+t_vector		*ft_vect_resize(t_vector *v, int capacity);
+void			*ft_vect_get(t_vector *v, int index);
+void			ft_vect_set(t_vector *v, int index, void *item);
+void			ft_vect_del(t_vector *v, int index);
+void			ft_vect_free(t_vector *v);
 
 #endif

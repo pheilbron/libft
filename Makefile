@@ -29,8 +29,8 @@ STDLIB		=	ft_itoa ft_atoi ft_lltoa ft_ulltoa_base get_next_line \
 				ft_memalloc
 LIST		=	ft_lstnew ft_lstdelone ft_lstdel ft_lstadd ft_lstiter \
 				ft_lstmap
-VECTOR		=	ft_vect_add ft_vect_del ft_vect_extend ft_vect_new \
-				ft_vect_insert
+VECTOR		=	ft_vect_add ft_vect_del ft_vect_resize ft_vect_new \
+				ft_vect_init ft_vect_free ft_vect_get ft_vect_set
 DSTRING		=	ft_dstr_add ft_dstr_del ft_dstr_extend ft_dstr_new \
 				ft_dstr_insert ft_dstr_init
 MATH		=	ft_pow ft_max ft_min
