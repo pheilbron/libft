@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dstr_extend.c                                   :+:      :+:    :+:   */
+/*   ft_dstr_resize.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/28 07:58:44 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 23:10:19 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/07/30 14:57:29 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/07/30 14:57:32 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_dstring.h"
 
-t_dstring	*ft_dstr_extend(t_dstring *s, size_t len)
+t_dstring	*ft_dstr_resize(t_dstring *s, size_t len)
 {
 	t_dstring	*temp;
 

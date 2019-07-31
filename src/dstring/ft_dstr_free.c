@@ -6,14 +6,18 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 22:57:47 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 22:59:53 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/07/30 18:58:55 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_dstring.h"
 
-void	ft_dstr_free(t_dstring *s)
+size_t	ft_dstr_free(t_dstring *s)
 {
+	size_t	ret;
+	
+	ret = s->pos;
 	free(s->buf);
 	free(s);
+	return (ret);
 }
