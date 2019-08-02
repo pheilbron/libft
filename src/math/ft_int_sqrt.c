@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_math.h                                          :+:      :+:    :+:   */
+/*   ft_int_sqrt.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/28 07:50:06 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/08/01 21:11:10 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/08/01 21:09:38 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/08/01 21:10:43 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MATH_H
-# define FT_MATH_H
+#include "ft_math.h"
 
-long	ft_pow(int base, int exp);
-int		ft_max(int a, int b);
-int		ft_min(int a, int b);
-int		ft_int_sqrt(int x);
+int	ft_int_sqrt(int x)
+{
+	int	ret;
 
-#endif
+	ret = 1;
+	while (ret * ret < x)
+		ret++;
+	return (ret - 1);
+}
