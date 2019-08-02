@@ -6,7 +6,7 @@
 #    By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/30 13:56:22 by pheilbro          #+#    #+#              #
-#    Updated: 2019/07/28 23:06:15 by pheilbro         ###   ########.fr        #
+#    Updated: 2019/08/02 15:54:36 by pheilbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ VECTOR		=	ft_vect_add ft_vect_del ft_vect_resize ft_vect_new \
 				ft_vect_init ft_vect_free ft_vect_get ft_vect_set
 DSTRING		=	ft_dstr_add ft_dstr_del ft_dstr_free ft_dstr_new \
 				ft_dstr_resize ft_dstr_init
-MATH		=	ft_pow ft_max ft_min
+MATH		=	ft_pow ft_max ft_min ft_int_sqrt
 				
 OBJ_DIR		=	obj
 SRC_DIR		=	src
