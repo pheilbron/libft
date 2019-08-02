@@ -6,21 +6,22 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 14:57:29 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/30 14:57:32 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/08/02 16:24:22 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_dstring.h"
+#include "ft_string.h"
 
 t_dstring	*ft_dstr_resize(t_dstring *s, size_t len)
 {
-	t_dstring	*temp;
+	char	*data;
 
-	temp = ft_dstr_new(s->buf,
-			(s->pos < len ? s->pos : len),
-			(s->pos < len ? s->pos : len));
-	ft_dstr_free(s);
-	s = ft_dstr_new(temp->buf, temp->pos, len);
-	ft_dstr_free(temp);
+	if (!(data = malloc(sizeof(*data) * len)))
+		return (NULL);
+	ft_memcpy(data, s->buf, len);
+	free(s->buf);
+	s->buf = data;
+	s->cap = len;
 	return (s);
 }
