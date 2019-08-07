@@ -6,23 +6,14 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 16:16:13 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 08:20:19 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/08/07 14:24:40 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdlib.h"
+#include "ft_math.h"
 
-unsigned long long	ft_ullpow(int base, int exp)
-{
-	long long	ret;
-
-	ret = 1;
-	while (exp-- > 0)
-		ret *= (unsigned long long)base;
-	return (ret);
-}
-
-char				get_val(int n, int cap)
+char	get_val(int n, int cap)
 {
 	char	*values;
 	char	*c_values;
@@ -34,7 +25,7 @@ char				get_val(int n, int cap)
 	return (values[n]);
 }
 
-char				*ft_ulltoa_base(unsigned long long n, int base, int cap)
+char	*ft_ulltoa_base(unsigned long long n, int base, int cap)
 {
 	char	*ret;
 	int		digit;

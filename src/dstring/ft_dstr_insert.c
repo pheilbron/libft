@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dstr_resize.c                                   :+:      :+:    :+:   */
+/*   ft_dstr_insert.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/30 14:57:29 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/08/07 14:18:04 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/08/04 18:27:48 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/08/06 14:40:21 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_dstring.h"
 #include "ft_string.h"
 
-t_dstring	*ft_dstr_resize(t_dstring *s, size_t len)
+size_t	ft_dstr_insert(t_dstring *s, char *new_data, size_t len, size_t pos)
 {
-	char	*data;
-
-	if (!(data = malloc(sizeof(*data) * len)))
-		return (NULL);
-	ft_memcpy(data, s->buf, s->pos);
-	free(s->buf);
-	s->buf = data;
-	s->cap = len;
-	return (s);
+	if (s->cap < s->pos + len + 1)
+		ft_dstr_resize(s, s->cap * 2 + (s->cap >= len + 1 ? 0 : len + 1));
+	ft_memmove(s->buf + pos + len , s->buf + pos, s->pos - pos);
+	ft_memcpy(s->buf + pos, new_data, len);
+	s->buf[s->pos + len] = '\0';
+	s->pos += len;
+	return (len);
 }

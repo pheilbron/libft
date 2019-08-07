@@ -6,7 +6,7 @@
 #    By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/30 13:56:22 by pheilbro          #+#    #+#              #
-#    Updated: 2019/08/02 15:54:36 by pheilbro         ###   ########.fr        #
+#    Updated: 2019/08/07 14:26:21 by pheilbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,15 +26,16 @@ CTYPE		=	ft_isspace ft_isblank ft_isalpha ft_isdigit ft_isalnum \
 STDIO		=	ft_putchar ft_putstr ft_putendl ft_putnbr ft_putchar_fd \
 				ft_putstr_fd ft_putendl_fd ft_putnbr_fd
 STDLIB		=	ft_itoa ft_atoi ft_lltoa ft_ulltoa_base get_next_line \
-				ft_memalloc
+				ft_memalloc ft_atoi_end
 LIST		=	ft_lstnew ft_lstdelone ft_lstdel ft_lstadd ft_lstiter \
 				ft_lstmap
 VECTOR		=	ft_vect_add ft_vect_del ft_vect_resize ft_vect_new \
 				ft_vect_init ft_vect_free ft_vect_get ft_vect_set
-DSTRING		=	ft_dstr_add ft_dstr_del ft_dstr_free ft_dstr_new \
-				ft_dstr_resize ft_dstr_init
-MATH		=	ft_pow ft_max ft_min ft_int_sqrt
-				
+DSTRING     =   ft_dstr_add ft_dstr_add_nc ft_dstr_del ft_dstr_free \
+				ft_dstr_new ft_dstr_resize ft_dstr_init ft_dstr_insert \
+				ft_dstr_insert_nc ft_dstr_overwrite
+MATH		=	ft_pow ft_max ft_min ft_llpow ft_ullpow ft_int_sqrt
+
 OBJ_DIR		=	obj
 SRC_DIR		=	src
 

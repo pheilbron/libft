@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dstr_resize.c                                   :+:      :+:    :+:   */
+/*   ft_llpow.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/30 14:57:29 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/08/07 14:18:04 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/08/04 16:42:59 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/08/04 16:43:34 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_dstring.h"
-#include "ft_string.h"
+#include "ft_math.h"
 
-t_dstring	*ft_dstr_resize(t_dstring *s, size_t len)
+long long	ft_llpow(int base, int exp)
 {
-	char	*data;
+	long long	ret;
 
-	if (!(data = malloc(sizeof(*data) * len)))
-		return (NULL);
-	ft_memcpy(data, s->buf, s->pos);
-	free(s->buf);
-	s->buf = data;
-	s->cap = len;
-	return (s);
+	ret = 1;
+	while (exp-- > 0)
+		ret *= (long long)base;
+	return (ret);
 }
