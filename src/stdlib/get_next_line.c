@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 14:45:12 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 08:22:53 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/08/08 13:50:51 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	empty_left_over(char **data, char *left_over, size_t *pos)
 		ft_memset(left_over + (len - i), '\0', BUFF_SIZE - (len - i));
 		return (0);
 	}
-	bzero(left_over, BUFF_SIZE);
+	ft_bzero(left_over, BUFF_SIZE);
 	return (1);
 }
 
