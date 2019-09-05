@@ -6,7 +6,7 @@
 #    By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/04 19:31:10 by pheilbro          #+#    #+#              #
-#    Updated: 2019/09/01 16:19:49 by pheilbro         ###   ########.fr        #
+#    Updated: 2019/09/04 22:34:51 by pheilbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ DSTRING     = ft_dstr_add ft_dstr_add_nc ft_dstr_del ft_dstr_free \
 			  ft_dstr_new ft_dstr_resize ft_dstr_init ft_dstr_insert \
 			  ft_dstr_insert_nc ft_dstr_overwrite ft_dstr_release \
 			  ft_dstr_fadd
+QUEUE		= ft_queue_init ft_queue_is_empty ft_queue_enqueue \
+			  ft_queue_dequeue ft_queue_peek
 MATH		= ft_pow ft_max ft_min ft_llpow ft_ullpow ft_int_sqrt
 PRINTF		= ft_printf ft_sprintf parse_data format printf_adjust_fw \
 			  printf_type convert_data ft_fstring ft_printf_ldtoa \
@@ -59,6 +61,7 @@ SRC			= $(patsubst %, string/%, $(STRING)) \
 			  $(patsubst %, list/%, $(LIST)) \
 			  $(patsubst %, vector/%, $(VECTOR)) \
 			  $(patsubst %, dstring/%, $(DSTRING)) \
+			  $(patsubst %, queue/%, $(QUEUE)) \
 			  $(patsubst %, math/%, $(MATH)) \
 			  $(patsubst %, stdio/ft_printf/%, $(PRINTF))
 OBJS		= $(patsubst %, $(OBJ_DIR)/%.o, $(SRC))
