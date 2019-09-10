@@ -6,14 +6,14 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:32:20 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/04 22:36:02 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/08 13:33:04 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "ft_queue.h"
 
-void *ft_queue_peek(t_queue *queue)
+void	*ft_queue_peek(t_queue *queue)
 {
 	if (ft_queue_is_empty(queue))
 		return (NULL);

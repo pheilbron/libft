@@ -6,14 +6,14 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:29:16 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/04 22:35:31 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/08 13:32:39 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "ft_queue.h"
 
-void ft_queue_enqueue(t_queue *queue, void *content)
+void	ft_queue_enqueue(t_queue *queue, void *content)
 {
 	t_node	*new;
 

@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_str_capitalize.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/28 08:13:48 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/08 13:13:54 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/09/05 14:04:55 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/09/05 14:08:19 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include "ft_string.h"
 
-# include <stdlib.h>
-# include <limits.h>
-# include <unistd.h>
+char	*ft_str_capitalize(char *s)
+{
+	size_t	len;
+	size_t	i;
+	char	*ret;
 
-# define BUFF_SIZE 32
-
-int		ft_atoi(const char *str);
-int		ft_atoi_end(const char *str, int *pos);
-char	*ft_itoa(int n);
-int		get_next_line(const int fd, char **line);
-char	*ft_lltoa(long long n);
-void	*ft_memalloc(size_t size);
-char	*ft_ulltoa_base(unsigned long long n, int base, int cap);
-
-#endif
+	len = ft_strlen(s);
+	if (!(ret = malloc(sizeof(*ret) * (len + 1))))
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		ret[i] = (s[i] >= 'a' && s[i] <= 'z' ? ft_toupper(s[i]) : s[i]);
+		i++;
+	}
+	ret[i] = '\0';
+	return (ret);
+}

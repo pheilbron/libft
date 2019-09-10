@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 08:24:03 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 08:44:44 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/05 14:09:22 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,7 @@ int		ft_tolower(int c);
 void	ft_lrotstr(char *str, size_t len, size_t offset);
 int		ft_modstrncmp(char *s1, char *s2, size_t n, size_t mod);
 void	ft_lmodrotstr(char *s, size_t len, size_t mod);
+
+char	*ft_str_capitalize(char *s);
 
 #endif

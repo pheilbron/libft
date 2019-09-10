@@ -6,13 +6,13 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:27:12 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/04 22:27:56 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/08 13:32:54 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_queue.h"
 
-int ft_queue_is_empty(t_queue *queue)
+int	ft_queue_is_empty(t_queue *queue)
 {
 	if (!queue || !queue->first)
 		return (1);

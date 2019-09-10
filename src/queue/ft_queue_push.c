@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_queue_push.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/28 08:13:48 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/08 13:13:54 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/09/06 09:55:35 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/09/08 13:33:11 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include <stdlib.h>
+#include "ft_queue.h"
 
-# include <stdlib.h>
-# include <limits.h>
-# include <unistd.h>
+void	ft_queue_push(t_queue *queue, void *content)
+{
+	t_node	*new;
 
-# define BUFF_SIZE 32
-
-int		ft_atoi(const char *str);
-int		ft_atoi_end(const char *str, int *pos);
-char	*ft_itoa(int n);
-int		get_next_line(const int fd, char **line);
-char	*ft_lltoa(long long n);
-void	*ft_memalloc(size_t size);
-char	*ft_ulltoa_base(unsigned long long n, int base, int cap);
-
-#endif
+	if ((new = malloc(sizeof(*new))))
+	{
+		new->content = content;
+		if (!ft_queue_is_empty(queue))
+			new->next = queue->first;
+		else
+		{
+			new->next = NULL;
+			queue->last = new;
+		}
+		queue->first = new;
+	}
+}

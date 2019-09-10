@@ -6,18 +6,14 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:21:03 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/04 22:33:07 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/08 13:34:48 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_QUEUE_H
 # define FT_QUEUE_H
 
-typedef struct	s_node
-{
-	void			*content;
-	struct s_node	*next;
-}				t_node;
+# include "ft_node.h"
 
 typedef struct	s_queue
 {
@@ -25,10 +21,11 @@ typedef struct	s_queue
 	t_node	*last;
 }				t_queue;
 
-int		ft_queue_is_empty(t_queue *queue);
-t_queue	*ft_queue_init(void);
-void	ft_queue_enqueue(t_queue *queue, void *content);
-void 	*ft_queue_dequeue(t_queue *queue);
-void 	*ft_queue_peek(t_queue *queue);
+int				ft_queue_is_empty(t_queue *queue);
+t_queue			*ft_queue_init(void);
+void			ft_queue_enqueue(t_queue *queue, void *content);
+void			ft_queue_push(t_queue *queue, void *content);
+void			*ft_queue_dequeue(t_queue *queue);
+void			*ft_queue_peek(t_queue *queue);
 
 #endif

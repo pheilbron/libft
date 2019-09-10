@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_stack_enqueue.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/28 08:13:48 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/08 13:13:54 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/09/08 13:28:46 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/09/08 13:31:47 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include <stdlib.h>
+#include "ft_stack.h"
 
-# include <stdlib.h>
-# include <limits.h>
-# include <unistd.h>
+void	ft_stack_enqueue(t_stack *stack, void *content)
+{
+	t_node	*new;
 
-# define BUFF_SIZE 32
-
-int		ft_atoi(const char *str);
-int		ft_atoi_end(const char *str, int *pos);
-char	*ft_itoa(int n);
-int		get_next_line(const int fd, char **line);
-char	*ft_lltoa(long long n);
-void	*ft_memalloc(size_t size);
-char	*ft_ulltoa_base(unsigned long long n, int base, int cap);
-
-#endif
+	if ((new = malloc(sizeof(*new))))
+	{
+		new->content = content;
+		new->next = NULL;
+		if (ft_stack_is_empty(stack))
+			stack->top = new;
+		else
+			stack->bottom->next = new;
+		stack->bottom = new;
+	}
+}
