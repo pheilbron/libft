@@ -6,14 +6,14 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 20:54:07 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/09 21:02:52 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/17 08:39:18 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_RBTREE_H
-# define FT_BRBTREE_H
+# define FT_RBTREE_H
 
-enum e_color
+enum	e_color
 {
 	BLACK,
 	RED
