@@ -66,6 +66,7 @@ typedef struct	s_color
 }				t_color;
 
 int				ft_printf(const char *format, ...);
+int				ft_fprintf(int fd, const char *format, ...);
 int				ft_sprintf(char *str, const char *format, ...);
 
 int				is_data_lmod(char c);

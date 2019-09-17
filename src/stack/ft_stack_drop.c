@@ -15,14 +15,16 @@
 
 void	*ft_stack_drop(t_stack *stack)
 {
-	t_node	*temp;
-	void	*content;
+	t_dl_node	*temp;
+	void		*content;
 
 	if (ft_stack_is_empty(stack))
 		return (NULL);
 	content = stack->bottom->content;
 	temp = stack->bottom;
-	stack->bottom = // second_to_last;
+	stack->bottom = temp->prev;
+	if (!(stack->bottom))
+		stack->top = NULL;
 	free(temp);
 	return (content);
 }

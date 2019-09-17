@@ -15,11 +15,12 @@
 
 void	*ft_stack_push(t_stack *stack, void *content)
 {
-	t_node	*new;
+	t_dl_node	*new;
 
 	if ((new = malloc(sizeof(*new))))
 	{
 		new->content = content;
+		new->prev = NULL;
 		if (!ft_stack_is_empty(stack))
 			new->next = stack->top;
 		else

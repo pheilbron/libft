@@ -19,4 +19,11 @@ typedef struct	s_node
 	struct s_node	*next;
 }				t_node;
 
+typedef struct	s_dl_node
+{
+	void				*content;
+	struct s_dl_node	*next;
+	struct s_dl_node	*prev;
+}				t_dl_node;
+
 #endif

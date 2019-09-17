@@ -40,8 +40,11 @@ QUEUE		= ft_queue_init ft_queue_is_empty ft_queue_enqueue \
 STACK		= ft_stack_init ft_stack_is_empty ft_stack_enqueue \
 			  ft_stack_pop ft_stack_peek ft_stack_push
 MATH		= ft_pow ft_max ft_min ft_llpow ft_ullpow ft_int_sqrt
-PRINTF		= ft_printf ft_sprintf parse_data format printf_adjust_fw \
-			  printf_type convert_data ft_fstring ft_printf_ldtoa \
+ERROR		= ft_error_init ft_error_new ft_error_std_message \
+			  ft_error_custom_message
+PRINTF		= ft_printf ft_sprintf ft_fprintf parse_data format \
+			  printf_adjust_fw printf_type convert_data ft_fstring \
+			  ft_printf_ldtoa \
 			  conversions/char \
 			  conversions/chars_written \
 			  conversions/color \
@@ -66,6 +69,7 @@ SRC			= $(patsubst %, string/%, $(STRING)) \
 			  $(patsubst %, queue/%, $(QUEUE)) \
 			  $(patsubst %, stack/%, $(STACK)) \
 			  $(patsubst %, math/%, $(MATH)) \
+			  $(patsubst %, error/%, $(ERROR)) \
 			  $(patsubst %, stdio/ft_printf/%, $(PRINTF))
 OBJS		= $(patsubst %, $(OBJ_DIR)/%.o, $(SRC))
 
