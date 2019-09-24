@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_node.h                                          :+:      :+:    :+:   */
+/*   ft_btree.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/08 13:13:11 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/23 20:23:30 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/09/23 20:20:45 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/09/23 20:23:29 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_NODE_H
-# define FT_NODE_H
+#ifndef FT_BTREE_H
+# define FT_BTREE_H
 
-typedef struct	s_node
-{
-	void			*content;
-	struct s_node	*next;
-}				t_node;
-
-typedef struct	s_dl_node
+typedef struct	s_btree_node
 {
 	void				*content;
-	struct s_dl_node	*next;
-	struct s_dl_node	*prev;
-}				t_dl_node;
+	struct s_btree_node	*left;
+	struct s_btree_node	*right;
+}				t_btree_node;
 
 #endif
