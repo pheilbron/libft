@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 08:24:03 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/05 14:09:22 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/23 20:18:21 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 void	ft_strclr(char *s);
 int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strcatcmp(const char *s1a, const char *s1b, const char *s2a,
+		const char *s2b);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);

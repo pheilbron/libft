@@ -6,7 +6,7 @@
 #    By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/04 19:31:10 by pheilbro          #+#    #+#              #
-#    Updated: 2019/09/08 13:36:12 by pheilbro         ###   ########.fr        #
+#    Updated: 2019/09/23 20:18:33 by pheilbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ STRING		= ft_strlen ft_strdup ft_strcpy ft_strncpy ft_strcat ft_strlcat \
 			  ft_strtrim ft_strsplit ft_stpncpy ft_strndup ft_stpcpy \
 			  ft_strlcpy ft_lrotstr ft_modstrncmp ft_lmodrotstr ft_memset \
 			  ft_bzero ft_memcpy ft_memmove ft_memchr ft_memcmp ft_memdel \
-			  ft_memndup ft_wstrlen ft_str_capitalize
+			  ft_memndup ft_wstrlen ft_str_capitalize ft_strcatcmp
 CTYPE		= ft_isspace ft_isblank ft_isalpha ft_isdigit ft_isalnum \
 			  ft_isascii ft_isprint
 STDIO		= ft_putchar ft_putstr ft_putendl ft_putnbr ft_putchar_fd \
