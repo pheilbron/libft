@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rbtree.h                                        :+:      :+:    :+:   */
+/*   ft_dstr_dump.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 20:54:07 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/25 08:59:56 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/09/25 08:57:31 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/09/25 08:58:48 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_RBTREE_H
-# define FT_RBTREE_H
+#include "ft_dstring.h"
+#include "ft_string.h"
 
-enum	e_color
+char	*ft_dstr_release(t_dstring *s)
 {
-	BLACK,
-	RED
-};
-
-typedef struct	s_rb_node
-{
-	struct s_rb_node	*parent;
-	struct s_rb_node	*left;
-	struct s_rb_node	*right;
-	enum e_color		color;
-	void				*data;
-}				t_rb_node;
-
-typedef struct	s_rbtree
-{
-	t_rb_node	*root;
-	int			(*compare)();
-}				t_rbtree;
-
-t_rb_node		*ft_rbtree_insert(t_rbtree *root, t_rb_node *n);
-
-#endif
+	if (s->pos == 0)
+		return (ft_strdup(""));
+	s->pos = 0;
+	return (s->buf);
+}

@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 07:34:21 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/01 15:37:51 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/25 08:59:43 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ size_t			ft_dstr_insert_nc(t_dstring *s, char c, size_t len, size_t pos);
 size_t			ft_dstr_overwrite(t_dstring *s, char *data, size_t len);
 t_dstring		*ft_dstr_resize(t_dstring *s, size_t len);
 void			ft_dstr_del(t_dstring *s, size_t index);
+char			*ft_dstr_dump(t_dstring *s);
 char			*ft_dstr_release(t_dstring *s);
 size_t			ft_dstr_free(t_dstring *s);
 

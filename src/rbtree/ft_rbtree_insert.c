@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rbtree_insert.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/25 09:00:25 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/09/25 09:03:07 by pheilbro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <stdlib.h>
 #include "ft_rbtree.h"
@@ -35,7 +46,7 @@ static void	insert_repair_tree_helper(t_rb_node *n)
 {
 	t_rb_node	*parent;
 	t_rb_node	*grandparent;
-	
+
 	parent = ft_rbtree_get_parent(n);
 	grandparent = ft_rbtree_get_grandparent(n);
 	if (n == parent->right && parent == grandparent->left)
