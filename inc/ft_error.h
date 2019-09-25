@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 08:33:24 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/17 08:33:27 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/25 12:31:35 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct	s_error
 t_error			*ft_error_init(int errno, ...);
 void			ft_error_new(t_error *e, int errno, ...);
 char			*ft_error_std_message(char *program_name, t_error e);
+void			ft_error_print_std_message(char *program_name, t_error e);
 char			*ft_error_custom_message(char *program_name, t_error e,
 		t_error *error_tab);
 

@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 09:00:25 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/25 09:03:07 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/25 12:32:42 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 static void	insert_recurse(t_rb_node *root, t_rb_node *n, int (*compare)())
 {
-	if (root && (*compare)(n->data, root->data) < 0)
+	if (root && (*compare)(n->content, root->content) < 0)
 	{
 		if (root->left)
 		{
@@ -91,6 +91,8 @@ static void	insert_repair_tree(t_rb_node *n)
 
 t_rb_node	*ft_rbtree_insert(t_rbtree *tree, t_rb_node *n)
 {
+	if (!n)
+		return (tree->root);
 	insert_recurse(tree->root, n, tree->compare);
 	insert_repair_tree(n);
 	tree->root = n;
