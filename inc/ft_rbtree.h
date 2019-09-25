@@ -31,7 +31,9 @@ typedef struct	s_rb_node
 typedef struct	s_rbtree
 {
 	t_rb_node	*root;
-	void		(*sort)();
+	int			(*compare)();
 }				t_rbtree;
+
+t_rb_node		*ft_rbtree_insert(t_rbtree *root, t_rb_node *n);
 
 #endif

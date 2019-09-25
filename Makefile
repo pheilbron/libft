@@ -42,6 +42,10 @@ STACK		= ft_stack_init ft_stack_is_empty ft_stack_enqueue \
 MATH		= ft_pow ft_max ft_min ft_llpow ft_ullpow ft_int_sqrt
 ERROR		= ft_error_init ft_error_new ft_error_std_message \
 			  ft_error_custom_message
+RBTREE		= ft_rbtree_insert \
+			  utils/ft_rbtree_get_parent utils/ft_rbtree_get_grandparent \
+			  utils/ft_rbtree_get_sibling utils/ft_rbtree_get_uncle \
+			  utils/ft_rbtree_rotate_left utils/ft_rbtree_rotate_right
 PRINTF		= ft_printf ft_sprintf ft_fprintf parse_data format \
 			  printf_adjust_fw printf_type convert_data ft_fstring \
 			  ft_printf_ldtoa \
@@ -70,6 +74,7 @@ SRC			= $(patsubst %, string/%, $(STRING)) \
 			  $(patsubst %, stack/%, $(STACK)) \
 			  $(patsubst %, math/%, $(MATH)) \
 			  $(patsubst %, error/%, $(ERROR)) \
+			  $(patsubst %, rbtree/%, $(RBTREE)) \
 			  $(patsubst %, stdio/ft_printf/%, $(PRINTF))
 OBJS		= $(patsubst %, $(OBJ_DIR)/%.o, $(SRC))
 
@@ -85,6 +90,7 @@ $(NAME): $(OBJS)
 	@ranlib $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c 
+	@echo Compiling $<.
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) $(INC_FLAGS) -c $< -o $@
 
