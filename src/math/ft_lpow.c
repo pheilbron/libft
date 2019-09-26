@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pow.c                                           :+:      :+:    :+:   */
+/*   ft_lpow.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/25 19:18:55 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/25 19:19:30 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/09/25 19:18:40 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/09/25 19:18:44 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_math.h"
 
-long double	ft_pow(long double base, long double exp)
+long	ft_lpow(int base, int exp)
 {
-	long double	i;
-	long double	ret;
+	int		i;
+	long	ret;
 
 	i = 0;
 	ret = 1;

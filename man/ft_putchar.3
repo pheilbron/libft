@@ -1,0 +1,74 @@
+.TH ft_putchar 3 "29 April 2019" "version 1.0"
+.SH NAME
+.BR ft_putchar ", " ft_putchar_fd ", " ft_putstr ", " ft_pustr_fd ", " ft_putendl ","
+.br
+.BR ft_putendl_fd ", " ft_putnbr ", " ft_putnbr_fd " -- output a character,"
+.br
+character string, or number to a stream
+.SH LIBRARY
+42 C Library (libft, -lft)
+.SH SYNOPSIS
+.B #include \(dqft_stdio.h\(dq
+.PP
+\fIvoid\fR
+.br
+\fBft_putchar\fR(\fIchar c\fR);
+.PP
+\fIvoid\fR
+.br
+\fBft_putchar_fd\fR(\fIchar c\fR, \fIint fd\fR);
+.PP
+\fIvoid\fR
+.br
+\fBft_putstr\fR(\fIchar const *s\fR);
+.PP
+\fIvoid\fR
+.br
+\fBft_putstr_fd\fR(\fIchar const *s\fR, \fIint fd\fR);
+.PP
+\fIvoid\fR
+.br
+\fBft_putendl\fR(\fIchar const *s\fR);
+.PP
+\fIvoid\fR
+.br
+\fBft_putendl_fd\fR(\fIchar const *s\fR, \fIint fd\fR);
+.PP
+\fIvoid\fR
+.br
+\fBft_putnbr\fR(\fIint n\fR);
+.PP
+\fIvoid\fR
+.br
+\fBft_putnbr_fd\fR(\fIint n\fR, \fIint fd\fR);
+.SH DESCRIPTION
+The \fBft_putchar\fR() function writes the character \fIc\fR to stdout.
+.PP
+The \fBft_putchar_fd\fR() function writes the character \fIc\fR to \fIfd\fR.
+.PP
+The \fBft_putstr\fR() function writes the character string \fIs\fR to stdout.
+.PP
+The \fBft_putstr_fd\fR() function writes the character string \fIs\fR to \fIfd\fR.
+.PP
+The \fBft_putendl\fR() function writes the character string \fIs\fR to stdout,
+.br
+followed by a newline.
+.PP
+The \fBft_putendl_fd\fR() function writes the character string \fIs\fR to \fIfd\fR,
+.br
+followed by a newline.
+.PP
+The \fBft_putnbr\fR() function writes the integer \fIn\fR to stdout.
+.PP
+The \fBft_putnbr_fd\fR() function writes the integer \fIn\fR to \fIfd\fR.
+.PP
+.SH RETURN VALUES
+.RB "The functions " ft_putchar "(), " ft_putchar_fd "(), " ft_putstr "(),"
+.br
+.BR ft_putstr_fd "(), " ft_putendl "(), " ft_putendl_fd "(), " ft_putnbr "(),"
+.br
+.RB "and " ft_putnbr_fd "() do not return values."
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Written by Phillip Heilbron.
