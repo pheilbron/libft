@@ -39,4 +39,13 @@ char			*ft_dstr_dump(t_dstring *s);
 char			*ft_dstr_release(t_dstring *s);
 size_t			ft_dstr_free(t_dstring *s);
 
+typedef struct	s_path
+{
+	t_dstring	*path;
+	int			offset;
+}				t_path;
+
+size_t			ft_path_add_dir(t_path *path, char *data, size_t len);
+void			ft_path_remove_dir(t_path *path);
+
 #endif

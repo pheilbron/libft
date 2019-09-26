@@ -16,7 +16,8 @@
 size_t	ft_dstr_overwrite(t_dstring *s, char *new_data, size_t len)
 {
 	if (s->cap < len + 1)
-		ft_dstr_resize(s, s->cap * 2 + (s->cap >= len + 1 ? 0 : len + 1));
+		if (!ft_dstr_resize(s, s->cap * 2 + (s->cap >= len + 1 ? 0 : len + 1)))
+			len = s->cap - 1;
 	ft_memcpy(s->buf, new_data, len);
 	s->buf[len] = '\0';
 	s->pos = len;

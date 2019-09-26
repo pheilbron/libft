@@ -13,7 +13,7 @@
 #include "ft_dstring.h"
 #include "ft_string.h"
 
-char	*ft_dstr_release(t_dstring *s)
+char	*ft_dstr_dump(t_dstring *s)
 {
 	if (s->pos == 0)
 		return (ft_strdup(""));

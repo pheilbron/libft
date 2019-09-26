@@ -20,11 +20,12 @@ t_dstring	*ft_dstr_new(char *data, size_t len, size_t cap)
 
 	if ((s = malloc(sizeof(*s))))
 	{
-		if ((s->buf = ft_memalloc(sizeof(*data) * (cap + 1))))
+		if ((s->buf = ft_memalloc(sizeof(*data) *
+						((cap > len ? cap : len) + 1))))
 		{
 			ft_memcpy(s->buf, data, len);
 			s->buf[len] = '\0';
-			s->cap = cap;
+			s->cap = (cap > len > cap : len);
 			s->pos = len;
 			return (s);
 		}

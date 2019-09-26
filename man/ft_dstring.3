@@ -1,0 +1,106 @@
+.TH ft_dstring 3 "29 April 2019" "version 1.0"
+.SH NAME
+\fBt_dstring\fR -- Create and manipulate dynamic string objects.
+.SH LIBRARY
+42 C Library (libft, -lft)
+.SH SYNOPSIS
+.B #include \(dqft_dstring.h\(dq
+.PP
+\fIt_dstring *\fR
+.br
+\fBft_dstr_init\fR(\fIvoid\fR);
+.PP
+\fIt_dstring *\fR
+.br
+\fBft_dstr_new\fR(\fIchar *data\fR, \fIsize_t len\fR, \fIsize_t cap\fR);
+.PP
+\fIsize_t\fR
+.br
+\fBft_dstr_add\fR(\fIt_dstring *s\fR, \fIchar *new_data\fR, \fIsize_t len\fR);
+.PP
+\fIsize_t\fR
+.br
+\fBft_dstr_add_nc\fR(\fIt_dstring *s\fR, \fIchar c\fR, \fIsize_t len\fR);
+.PP
+\fIint\fR
+.br
+\fBft_dstr_addf\fR(\fIt_dstring *s\fR, \fIconst char *format\fR, ...);
+.PP
+\fIsize_t\fR
+.br
+\fBft_dstr_insert\fR(\fIt_dstring *s\fR, \fIchar *new_data\fR, \fIsize_t len\fR, \fIsize_t pos\fR);
+.PP
+\fIsize_t\fR
+.br
+\fBft_dstr_add_nc\fR(\fIt_dstring *s\fR, \fIchar c\fR, \fIsize_t len\fR, \fIsize_t pos\fR);
+.PP
+\fIsize_t\fR
+.br
+\fBft_dstr_overwrite\fR(\fIt_dstring *s\fR, \fIchar *new_data\fR, \fIsize_t len\fR);
+.PP
+\fIchar *\fR
+.br
+\fBft_dstr_dump\fR(\fIt_dstring *s\fR);
+.PP
+\fIchar *\fR
+.br
+\fBft_dstr_release\fR(\fIt_dstring *s\fR);
+.PP
+\fIsize_t\fR
+.br
+\fBft_dstr_free\fR(\fIt_dstring *s\fR);
+.SH DESCRIPTION
+A dynamic string is a resizable null-terminated character string. It is defined as:
+.br
+\fIt_dstring\fR {
+.br
+	\fIchar *\fR	buf;
+.br	
+	\fIsize_t\fR	pos;
+.br	
+	\fIsize_t\fR	cap;
+.br
+}
+.br
+where \fIbuf\fR holds the null-terminated buffer, \fIpos\fR is the index of the null character, and \fIcap\fR is the allocated length of \fIbuf\fR.
+.PP
+The \fBft_dstr_init\fR() function initializes a \fIt_dstring *\fR with an initial capacity of 8.
+.PP
+The \fBft_dstr_new\fR() function initializes a \fIt_dstring *\fR with an initial capacity of \fIcap\fR, unless \fIcap\fR is shorter than \fIlen\fR, in which case \fIlen\fR is used as the inital capacity. The first \fIlen\fR characters of \fIdata\fR are copied into the dynamic string and the position is set accordingly.
+.PP
+The \fBft_dstr_add\fR() function copies \fIlen\fR characters from \fInew_data\fR to the end of \fIs\fR.
+.PP
+The \fBft_dstr_add_nc\fR() function writes \fIlen\fR \fIc\fRs to the end of \fIs\fR.
+.PP
+The \fBft_dstr_addf\fR() function uses the function \fBft_printf\fR() to convert \fIformat\fR into a character string and then copies the result to the end of \fIs\fR.
+.PP
+The \fBft_dstr_insert\fR() function inserts \fIlen\fR characters from \fInew_data\fR at index \fIpos\fR in \fIs\fR. 
+.PP
+The \fBft_dstr_insert_nc\fR() function inserts \fIlen\fR \fIc\fRs at index \fIpos\fR in \fIs\fR.
+.PP
+For \fBft_dstr_insert\fR() and \fBft_dstr_insert_nc\fR(), if \fIpos\fR is outside the bounds of the current buffer, no action is taken.
+.PP
+The \fBft_dstr_overwrite\fR() function copies \fIlen\fR characters from \fInew_data\fR to the beginning of \fIs\fR.
+.PP
+For \fBft_dstr_add\fR(), \fBft_dstr_add_nc\fR(), \fBft_dstr_addf\fR(), \fBft_dstr_insert\fR(), \fBft_dstr_insert_nc\fR(), and \fBft_dstr_overwrite\fR(), if the addition would overflow the buffer, then it is doubled in size (and extended by \fIlen\fR, if \fIlen\fR is larger than the new buffer size) before the data is copied. If the resizing fails, only as many characters are copied to the buffer as can fit in the original capacity, including a null character.
+.PP
+The \fBft_dstr_dump\fR() function returns the buffer and resets \fIs->pos\fR to 0.
+.PP
+The \fBft_dstr_release\fR() function returns the buffer and frees \fIs\fR.
+.PP
+The \fBft_dstr_free\fR() function frees the buffer and then \fIs\fR.
+.PP
+.SH RETURN VALUES
+The functions \fBft_dstr_init\fR() and \fBft_dstr_new\fR() return an initialized \fIt_dstring *\fR. If any of the mallocs fail, the functions return \fINULL\fR.
+.PP
+The functions \fBft_dstr_add\fR(), \fBft_dstr_add_nc\fR(), \fBft_dstr_addf\fR(), \fBft_dstr_insert\fR(), \fBft_dstr_insert_nc\fR(), and \fBft_dstr_overwrite\fR() return the number of characters added to \fIs\fR.
+.PP
+The functions \fBft_dstr_dump\fR() and \fBft_dstr_release\fR() return \fIs->buf\fR.
+.PP
+The function \fBft_dstr_free\fR() returns the length of \fIs->buf\fR.
+.SH SEE ALSO
+ft_printf(3)
+.SH BUGS
+Because the functions \fBft_dstr_insert\fR() and \fBft_dstr_add\fR() do not require \fInew_data\fR to be null-terminated, if \fIlen\fR is bigger than the length of \fInew_data\fR, the behavior is undefined.
+.SH AUTHOR
+Written by Phillip Heilbron.

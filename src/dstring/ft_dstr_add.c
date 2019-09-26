@@ -16,7 +16,8 @@
 size_t	ft_dstr_add(t_dstring *s, char *new_data, size_t len)
 {
 	if (s->cap < s->pos + len + 1)
-		ft_dstr_resize(s, s->cap * 2 + (s->cap >= len + 1 ? 0 : len + 1));
+		if (!ft_dstr_resize(s, s->cap * 2 + (s->cap >= len + 1 ? 0 : len + 1)))
+			len = s->cap - (s->pos + 1);
 	ft_memcpy(s->buf + s->pos, new_data, len);
 	s->buf[s->pos + len] = '\0';
 	s->pos += len;
