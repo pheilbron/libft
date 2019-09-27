@@ -1,4 +1,4 @@
-.TH ft_dstring 3 "29 April 2019" "version 1.0"
+.TH ft_dstring 3 "28 July 2019" "version 1.0"
 .SH NAME
 \fBt_dstring\fR -- Create and manipulate dynamic string objects.
 .SH LIBRARY
@@ -24,7 +24,7 @@
 .PP
 \fIint\fR
 .br
-\fBft_dstr_addf\fR(\fIt_dstring *s\fR, \fIconst char *format\fR, ...);
+\fBft_dstr_addf\fR(\fIt_dstring *s\fR, \fIconst char *format\fR, \fI...\fR);
 .PP
 \fIsize_t\fR
 .br
@@ -56,9 +56,9 @@ A dynamic string is a resizable null-terminated character string. It is defined 
 .br
 	\fIchar *\fR	buf;
 .br	
-	\fIsize_t\fR	pos;
-.br	
 	\fIsize_t\fR	cap;
+.br	
+	\fIsize_t\fR	pos;
 .br
 }
 .br

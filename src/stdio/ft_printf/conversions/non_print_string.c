@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 09:23:10 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/08/29 10:54:15 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/26 10:08:24 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void	set_non_print_char(t_dstring *s, unsigned char c)
 		digit++;
 	while (digit >= 0)
 	{
-		ft_dstr_add(s, values + (c / ft_pow(16, digit)), 1);
-		c -= (c / ft_pow(16, digit)) * ft_pow(16, digit);
+		ft_dstr_add(s, values + (c / ft_lpow(16, digit)), 1);
+		c -= (c / ft_lpow(16, digit)) * ft_lpow(16, digit);
 		digit--;
 	}
 }

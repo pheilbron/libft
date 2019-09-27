@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 08:45:45 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 08:45:58 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/26 08:29:19 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ typedef struct	s_vector
 	int		pos;
 }				t_vector;
 
-t_vector		*ft_vect_init(t_vector *v, int capacity);
-t_vector		*ft_vect_new(int capacity);
+t_vector		*ft_vect_init(int capacity);
+t_vector		*ft_vect_new(t_vector *v, int capacity);
 void			*ft_vect_add(t_vector *v, void *data);
 t_vector		*ft_vect_resize(t_vector *v, int capacity);
 void			*ft_vect_get(t_vector *v, int index);

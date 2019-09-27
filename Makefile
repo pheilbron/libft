@@ -6,7 +6,7 @@
 #    By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/04 19:31:10 by pheilbro          #+#    #+#              #
-#    Updated: 2019/09/25 19:19:55 by pheilbro         ###   ########.fr        #
+#    Updated: 2019/09/26 10:06:18 by pheilbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ STACK		= ft_stack_init ft_stack_is_empty ft_stack_enqueue \
 MATH		= ft_pow ft_lpow ft_max ft_min ft_llpow ft_ullpow ft_int_sqrt
 ERROR		= ft_error_init ft_error_new ft_error_std_message \
 			  ft_error_custom_message
-RBTREE		= ft_rbtree_insert ft_rbtree_new_node \
+RBTREE		= ft_rbtree_insert ft_rbtree_new_node ft_rbtree_init \
+			  ft_rbtree_free \
 			  utils/ft_rbtree_get_parent utils/ft_rbtree_get_grandparent \
 			  utils/ft_rbtree_get_sibling utils/ft_rbtree_get_uncle \
 			  utils/ft_rbtree_rotate_left utils/ft_rbtree_rotate_right

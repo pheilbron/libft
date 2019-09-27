@@ -1,4 +1,4 @@
-.TH ft_vector 3 "29 April 2019" "version 1.0"
+.TH ft_vector 3 "28 July 2019" "version 1.0"
 .SH NAME
 \fBt_vector\fR -- Create and manipulate vector objects.
 .SH LIBRARY
@@ -14,13 +14,9 @@
 .br
 \fBft_vect_new\fR(\fIt_vector *v\fR, \fIint capacity\fR);
 .PP
-\fIsize_t\fR
+\fIvoid *\fR
 .br
 \fBft_vect_add\fR(\fIt_vector *v\fR, \fIvoid *data\fR);
-.PP
-\fIvoid\fR
-.br
-\fBft_vect_del\fR(\fIt_vector *v\fR, \fIint index\fR);
 .PP
 \fIvoid *\fR
 .br
@@ -32,59 +28,47 @@
 .PP
 \fIvoid\fR
 .br
+\fBft_vect_del\fR(\fIt_vector *v\fR, \fIint index\fR);
+.PP
+\fIvoid\fR
+.br
 \fBft_vect_free\fR(\fIt_vector *v\fR);
 .SH DESCRIPTION
-A dynamic string is a resizable null-terminated character string. It is defined as:
+A vector is a resizable array. It is defined as:
 .br
 \fIt_vector\fR {
 .br
-	\fIchar *\fR	buf;
+	\fIvoid **\fR	data;
 .br	
-	\fIsize_t\fR	pos;
+	\fIint\fR		cap;
 .br	
-	\fIsize_t\fR	cap;
+	\fIint\fR		pos;
 .br
 }
 .br
-where \fIbuf\fR holds the null-terminated buffer, \fIpos\fR is the index of the null character, and \fIcap\fR is the allocated length of \fIbuf\fR.
+where \fIdata\fR holds the non-null-terminated array, \fIpos\fR is the index of the first unwritten cell, and \fIcap\fR is the allocated length of \fIbuf\fR.
 .PP
-The \fBft_dstr_init\fR() function initializes a \fIt_dstring *\fR with an initial capacity of 8.
+The \fBft_vect_init\fR() function initializes a \fIt_vector *\fR with an initial capacity of \fIcapacity\fR.
 .PP
-The \fBft_dstr_new\fR() function initializes a \fIt_dstring *\fR with an initial capacity of \fIcap\fR, unless \fIcap\fR is shorter than \fIlen\fR, in which case \fIlen\fR is used as the inital capacity. The first \fIlen\fR characters of \fIdata\fR are copied into the dynamic string and the position is set accordingly.
+The \fBft_vect_new\fR() function initializes a \fIv\fR, an already allocated struct with an initial capacity of \fIcapacity\fR.
 .PP
-The \fBft_dstr_add\fR() function copies \fIlen\fR characters from \fInew_data\fR to the end of \fIs\fR.
+The \fBft_vect_add\fR() function adds \fIdata\fR to index \fIv->pos\fR of \fIv\fR.
 .PP
-The \fBft_dstr_add_nc\fR() function writes \fIlen\fR \fIc\fRs to the end of \fIs\fR.
+The \fBft_vect_get\fR() function returns the data at \fIindex\fR.
 .PP
-The \fBft_dstr_addf\fR() function uses the function \fBft_printf\fR() to convert \fIformat\fR into a character string and then copies the result to the end of \fIs\fR.
+The \fBft_vect_set\fR() function replaces the data in \fIv\fR at \fIindex\fR with \fIitem\fR.
 .PP
-The \fBft_dstr_insert\fR() function inserts \fIlen\fR characters from \fInew_data\fR at index \fIpos\fR in \fIs\fR. 
+The \fBft_vect_del\fR() function removes the data at \fIindex\fR and moves all subsequent data to the left.
 .PP
-The \fBft_dstr_insert_nc\fR() function inserts \fIlen\fR \fIc\fRs at index \fIpos\fR in \fIs\fR.
-.PP
-For \fBft_dstr_insert\fR() and \fBft_dstr_insert_nc\fR(), if \fIpos\fR is outside the bounds of the current buffer, no action is taken.
-.PP
-The \fBft_dstr_overwrite\fR() function copies \fIlen\fR characters from \fInew_data\fR to the beginning of \fIs\fR.
-.PP
-For \fBft_dstr_add\fR(), \fBft_dstr_add_nc\fR(), \fBft_dstr_addf\fR(), \fBft_dstr_insert\fR(), \fBft_dstr_insert_nc\fR(), and \fBft_dstr_overwrite\fR(), if the addition would overflow the buffer, then it is doubled in size (and extended by \fIlen\fR, if \fIlen\fR is larger than the new buffer size) before the data is copied. If the resizing fails, only as many characters are copied to the buffer as can fit in the original capacity, including a null character.
-.PP
-The \fBft_dstr_dump\fR() function returns the buffer and resets \fIs->pos\fR to 0.
-.PP
-The \fBft_dstr_release\fR() function returns the buffer and frees \fIs\fR.
-.PP
-The \fBft_dstr_free\fR() function frees the buffer and then \fIs\fR.
+The \fBft_vect_free\fR() function frees the array, \fIdata\fR  and then \fIv\fR.
 .PP
 .SH RETURN VALUES
-The functions \fBft_dstr_init\fR() and \fBft_dstr_new\fR() return an initialized \fIt_dstring *\fR. If any of the mallocs fail, the functions return \fINULL\fR.
+The functions \fBft_vect_init\fR() and \fBft_vect_new\fR() return an initialized \fIt_vector *\fR. If any of the memory allocations fail, the functions return \fINULL\fR.
 .PP
-The functions \fBft_dstr_add\fR(), \fBft_dstr_add_nc\fR(), \fBft_dstr_addf\fR(), \fBft_dstr_insert\fR(), \fBft_dstr_insert_nc\fR(), and \fBft_dstr_overwrite\fR() return the number of characters added to \fIs\fR.
+The functions \fBft_vect_add\fR() and \fBft_vect_get\fR() return the data added and data at \fIindex\fR, respectively, as a \fIvoid *\fR.
 .PP
-The functions \fBft_dstr_dump\fR() and \fBft_dstr_release\fR() return \fIs->buf\fR.
-.PP
-The function \fBft_dstr_free\fR() returns the length of \fIs->buf\fR.
-.SH SEE ALSO
-ft_printf(3)
+The functions \fBft_vect_set\fR(), \fBft_vect_del\fR() and \fBft_vect_free\fR() do not return a value.
 .SH BUGS
-Because the functions \fBft_dstr_insert\fR() and \fBft_dstr_add\fR() do not require \fInew_data\fR to be null-terminated, if \fIlen\fR is bigger than the length of \fInew_data\fR, the behavior is undefined.
+No known bugs.
 .SH AUTHOR
 Written by Phillip Heilbron.

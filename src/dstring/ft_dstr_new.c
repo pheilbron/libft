@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 07:59:40 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/07/28 22:49:16 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/26 10:02:04 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_dstring	*ft_dstr_new(char *data, size_t len, size_t cap)
 		{
 			ft_memcpy(s->buf, data, len);
 			s->buf[len] = '\0';
-			s->cap = (cap > len > cap : len);
+			s->cap = (cap > len ? cap : len);
 			s->pos = len;
 			return (s);
 		}

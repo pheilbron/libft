@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 20:54:07 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/25 09:59:16 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/09/26 10:11:54 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ typedef struct	s_rbtree
 	int			(*compare)();
 }				t_rbtree;
 
+t_rbtree		*ft_rbtree_init(void);
 t_rb_node		*ft_rbtree_insert(t_rbtree *root, t_rb_node *n);
+t_rb_node		*ft_rbtree_new_node(void *content);
+void			ft_rbtree_free(t_rbtree *tree);
 
 #endif
