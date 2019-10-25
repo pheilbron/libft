@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 08:13:48 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/08 13:13:54 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/10/24 20:11:30 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 
 # define BUFF_SIZE 32
 
-int		ft_atoi(const char *str);
-int		ft_atoi_end(const char *str, int *pos);
-char	*ft_itoa(int n);
-int		get_next_line(const int fd, char **line);
-char	*ft_lltoa(long long n);
-void	*ft_memalloc(size_t size);
-char	*ft_ulltoa_base(unsigned long long n, int base, int cap);
+int			ft_atoi(const char *str);
+int			ft_atoi_end(const char *str, int *pos);
+long long	ft_atoll(const char *str);
+char		*ft_itoa(int n);
+int			get_next_line(const int fd, char **line);
+char		*ft_lltoa(long long n);
+void		*ft_memalloc(size_t size);
+char		*ft_ulltoa_base(unsigned long long n, int base, int cap);
 
 #endif

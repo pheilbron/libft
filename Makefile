@@ -6,7 +6,7 @@
 #    By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/04 19:31:10 by pheilbro          #+#    #+#              #
-#    Updated: 2019/09/26 10:06:18 by pheilbro         ###   ########.fr        #
+#    Updated: 2019/10/24 20:08:09 by pheilbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ CTYPE		= ft_isspace ft_isblank ft_isalpha ft_isdigit ft_isalnum \
 STDIO		= ft_putchar ft_putstr ft_putendl ft_putnbr ft_putchar_fd \
 			  ft_putstr_fd ft_putendl_fd ft_putnbr_fd
 STDLIB		= ft_itoa ft_atoi ft_lltoa ft_ulltoa_base get_next_line \
-			  ft_memalloc ft_atoi_end
+			  ft_memalloc ft_atoi_end ft_atoll
 LIST		= ft_lstnew ft_lstdelone ft_lstdel ft_lstadd ft_lstiter \
 			  ft_lstmap
 VECTOR		= ft_vect_add ft_vect_del ft_vect_resize ft_vect_new \
@@ -38,7 +38,7 @@ DSTRING     = ft_dstr_add ft_dstr_add_nc ft_dstr_del ft_dstr_free \
 QUEUE		= ft_queue_init ft_queue_is_empty ft_queue_enqueue \
 			  ft_queue_dequeue ft_queue_peek ft_queue_push
 STACK		= ft_stack_init ft_stack_is_empty ft_stack_enqueue \
-			  ft_stack_pop ft_stack_peek ft_stack_push
+			  ft_stack_pop ft_stack_peek ft_stack_push ft_stack_get_next
 MATH		= ft_pow ft_lpow ft_max ft_min ft_llpow ft_ullpow ft_int_sqrt
 ERROR		= ft_error_init ft_error_new ft_error_std_message \
 			  ft_error_custom_message
