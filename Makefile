@@ -6,7 +6,7 @@
 #    By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/04 19:31:10 by pheilbro          #+#    #+#              #
-#    Updated: 2019/10/24 20:08:09 by pheilbro         ###   ########.fr        #
+#    Updated: 2019/10/25 15:12:23 by pheilbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ STRING		= ft_strlen ft_strdup ft_strcpy ft_strncpy ft_strcat ft_strlcat \
 			  ft_strtrim ft_strsplit ft_stpncpy ft_strndup ft_stpcpy \
 			  ft_strlcpy ft_lrotstr ft_modstrncmp ft_lmodrotstr ft_memset \
 			  ft_bzero ft_memcpy ft_memmove ft_memchr ft_memcmp ft_memdel \
-			  ft_memndup ft_wstrlen ft_str_capitalize ft_strcatcmp
+			  ft_memdup ft_memndup ft_wstrlen ft_str_capitalize ft_strcatcmp
 CTYPE		= ft_isspace ft_isblank ft_isalpha ft_isdigit ft_isalnum \
 			  ft_isascii ft_isprint
 STDIO		= ft_putchar ft_putstr ft_putendl ft_putnbr ft_putchar_fd \
@@ -38,7 +38,8 @@ DSTRING     = ft_dstr_add ft_dstr_add_nc ft_dstr_del ft_dstr_free \
 QUEUE		= ft_queue_init ft_queue_is_empty ft_queue_enqueue \
 			  ft_queue_dequeue ft_queue_peek ft_queue_push
 STACK		= ft_stack_init ft_stack_is_empty ft_stack_enqueue \
-			  ft_stack_pop ft_stack_peek ft_stack_push ft_stack_get_next
+			  ft_stack_pop ft_stack_peek ft_stack_push ft_stack_get_next \
+			  ft_stack_del ft_stack_drop ft_stack_get_prev
 MATH		= ft_pow ft_lpow ft_max ft_min ft_llpow ft_ullpow ft_int_sqrt
 ERROR		= ft_error_init ft_error_new ft_error_std_message \
 			  ft_error_custom_message

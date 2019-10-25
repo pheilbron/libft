@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 08:24:03 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/23 20:18:21 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/10/25 15:11:56 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	ft_memdel(void **ap);
+void	*ft_memdup(const void *src, size_t size);
 void	*ft_memndup(const void *src, size_t len, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);

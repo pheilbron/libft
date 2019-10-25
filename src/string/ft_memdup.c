@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_push.c                                    :+:      :+:    :+:   */
+/*   ft_memdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/08 13:23:01 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/10/25 14:24:05 by pheilbro         ###   ########.fr       */
+/*   Created: 2019/10/25 15:09:54 by pheilbro          #+#    #+#             */
+/*   Updated: 2019/10/25 15:11:59 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "ft_stack.h"
+# include "ft_string.h"
 
-void	*ft_stack_push(t_stack *stack, void *content)
+void	*ft_memdup(const void *src, size_t size)
 {
-	t_dl_node	*new;
+	void	*dest;
 
-	if ((new = malloc(sizeof(*new))))
-	{
-		new->content = content;
-		new->prev = NULL;
-		if (!ft_stack_is_empty(stack))
-		{
-			stack->top->prev = new;
-			new->next = stack->top;
-		}
-		else
-		{
-			new->next = NULL;
-			stack->bottom = new;
-		}
-		stack->top = new;
-	}
-	return (content);
+	if (!(dest = malloc(sizeof(*dest) * size)))
+		return (NULL);
+	ft_memcpy(dest, src, size);
+	return (dest);
 }

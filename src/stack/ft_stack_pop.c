@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 13:19:50 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/08 13:31:02 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/10/25 14:21:44 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ void	*ft_stack_pop(t_stack *stack)
 	content = stack->top->content;
 	temp = stack->top;
 	stack->top = temp->next;
-	temp->next->prev = NULL;
-	if (!stack->top)
+	if (stack->top)
+		temp->next->prev = NULL;
+	else
 		stack->bottom = NULL;
 	free(temp);
 	return (content);
