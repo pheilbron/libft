@@ -33,15 +33,15 @@ gcc [srcs] -L <libft path> -lft
 ````
 
 ## Functions
-#### Standard Library
-#### Standard I/O
-#### Additional Data Types
-###### Dynamic Strings
-###### Lists
-###### Queues
-###### Red & Black Trees
-###### Stacks
-###### Vectors
+### Standard Library
+### Standard I/O
+### Additional Data Types
+#### Dynamic Strings
+#### Lists
+#### Queues
+#### Red & Black Trees
+#### Stacks
+#### Vectors
 
 ## Future 
 This library is updated from time to time as the needs of future 42 projects reveal themselves.
