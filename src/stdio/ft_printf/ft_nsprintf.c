@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 10:29:26 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/09/25 10:30:54 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/10/31 23:02:32 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ft_dstring.h"
 #include "ft_string.h"
 
-int	ft_nsprintf(char *str, const char *format, ...)
+int	ft_nsprintf(char **str, const char *format, ...)
 {
 	va_list		ap;
 	int			i;
@@ -36,7 +36,7 @@ int	ft_nsprintf(char *str, const char *format, ...)
 			i++;
 	}
 	ft_dstr_add(s, (char *)format, i);
-	str = ft_dstr_release(s);
+	(*str) = ft_dstr_release(s);
 	va_end(ap);
 	return (1);
 }

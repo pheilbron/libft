@@ -6,7 +6,7 @@
 /*   By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 18:29:18 by pheilbro          #+#    #+#             */
-/*   Updated: 2019/08/29 21:12:20 by pheilbro         ###   ########.fr       */
+/*   Updated: 2019/10/31 23:03:02 by pheilbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ typedef struct	s_color
 int				ft_printf(const char *format, ...);
 int				ft_fprintf(int fd, const char *format, ...);
 int				ft_sprintf(char *str, const char *format, ...);
+int				ft_nsprintf(char **str, const char *format, ...);
 
 int				is_data_lmod(char c);
 int				is_data_conversion(char c);
