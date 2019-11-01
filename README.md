@@ -253,6 +253,6 @@ ft_vect_set
 This library is updated from time to time as the needs of future 42 projects reveal themselves.
 
 ## Credits  
-* [Michael Brave](https://www.github.com/michaelbrave/)
+* README based on template by [Michael Brave](https://www.github.com/michaelbrave/)
 
 [42]: http://42.us.org "School 42"
