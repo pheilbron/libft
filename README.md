@@ -35,7 +35,8 @@ gcc [srcs] -L <libft path> -lft
 ## Functions
 ### Standard Library
 
-ft_atoi, ft_atoi_end, ft_atoll
+| [`ft_atoi`](https://github.com/pheilbron/libft/src/stdlib/ft_atoi.c)<br>
+`ft_atoi_end`<br>`ft_atoll`<br>`#include stdlib.h` | description |
 ft_bzero
 get_next_line
 ft_isalnum, ft_isascii, ft_isdigit, ft_isspace, ft_isalpha, ft_isblank, ft_isprint
