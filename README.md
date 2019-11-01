@@ -33,7 +33,7 @@ gcc [srcs] -L <libft path> -lft
 ````
 
 ## Functions
-#### Standard Library
+### Standard Library
 
 ft_atoi, ft_atoi_end, ft_atoll
 ft_bzero
@@ -66,7 +66,7 @@ ft_strsub
 ft_strtrim
 ft_tolower, ft_toupper, ft_strcapitalize
 
-#### Standard I/O
+### Standard I/O
 
 ft_printf, ft_fprintf, ft_nsprintf, ft_sprintf
 ft_putchar, ft_putchar_fd
@@ -74,8 +74,8 @@ ft_putendl, ft_putendl_fd
 ft_putnbr, ft_putnbr_fd
 ft_putstr, ft_putstr_fd
 
-#### Additional Data Types
-###### Dynamic Strings
+### Additional Data Types
+#### Dynamic Strings
 
 ft_dstr_add, ft_dstr_add_nc
 ft_dstr_del
@@ -89,11 +89,11 @@ ft_dstr_overwrite
 ft_dstr_release
 ft_dstr_resize
 
-###### Lists
-###### Queues
-###### Red & Black Trees
-###### Stacks
-###### Vectors
+#### Lists
+#### Queues
+#### Red & Black Trees
+#### Stacks
+#### Vectors
 
 ## Future 
 This library is updated from time to time as the needs of future 42 projects reveal themselves.
