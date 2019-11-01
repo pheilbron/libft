@@ -38,35 +38,35 @@ gcc [srcs] -L <libft path> -lft
 | Function | Description |
 | -------- | ----------- |
 | [`int ft_atoi(const char *str)`](https://github.com/pheilbron/libft/src/stdlib/ft_atoi.c)<br/>[`int ft_atoi_end(const char *str, int *pos)`](https://github.com/pheilbron/libft/src/stdlib/ft_atoi_end.c)<br/>[`long long ft_atoll(const char *str)`](https://github.com/pheilbron/libft/src/stdlib/ft_atoll.c)<br/>`#include stdlib.h` | description |
-ft_bzero
-get_next_line
-ft_isalnum, ft_isascii, ft_isdigit, ft_isspace, ft_isalpha, ft_isblank, ft_isprint
-ft_itoa, ft_lltoa, ft_ulltoa_base
-ft_memalloc
-ft_memcpy, ft_memccpy
-ft_memchr
-ft_memcmp
-ft_memdel
-ft_memdup, ft_memndup
-ft_memmove
-ft_memset
-ft_strcat, ft_strlcat, ft_strncat
-ft_strchr, ft_strrchr
-ft_strclr
-ft_strcmp, ft_strncmp
-ft_strcpy, ft_strlcpy, ft_strncpy, ft_stpcpy, ft_stpncpy
-ft_strdel
-ft_strdup, ft_strndup
-ft_strequ, ft_strnequ
-ft_striter, ft_striteri
-ft_strjoin
-ft_strlen, ft_wstrlen
-ft_strmap, ft_strmapi
-ft_strsplit
-ft_strstr, ft_strnstr
-ft_strsub
-ft_strtrim
-ft_tolower, ft_toupper, ft_strcapitalize
+| ft_bzero
+| [`int get_next_line(const int fd, char **line)`]<br/>`#include stdlib.h` | description |
+| ft_isalnum, ft_isascii, ft_isdigit, ft_isspace, ft_isalpha, ft_isblank, ft_isprint
+| [`char *ft_itoa(int n)`]<br/>[`char *ft_lltoa(long long n)`]<br/>[`char *ft_ulltoa_base(unsigned long long n, int base, int cap)`]<br/>`#include stdlib.h` | description |
+| [`void *ft_memalloc(size_t size)']<br/>`#include stdlib.h` | description |
+| ft_memcpy, ft_memccpy
+| ft_memchr
+| ft_memcmp
+| ft_memdel
+| ft_memdup, ft_memndup
+| ft_memmove
+| ft_memset
+| ft_strcat, ft_strlcat, ft_strncat
+| ft_strchr, ft_strrchr
+| ft_strclr
+| ft_strcmp, ft_strncmp
+| ft_strcpy, ft_strlcpy, ft_strncpy, ft_stpcpy, ft_stpncpy
+| ft_strdel
+| ft_strdup, ft_strndup
+| ft_strequ, ft_strnequ
+| ft_striter, ft_striteri
+| ft_strjoin
+| ft_strlen, ft_wstrlen
+| ft_strmap, ft_strmapi
+| ft_strsplit
+| ft_strstr, ft_strnstr
+| ft_strsub
+| ft_strtrim
+| ft_tolower, ft_toupper, ft_strcapitalize
 
 ### Standard I/O
 
