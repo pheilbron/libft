@@ -43,30 +43,31 @@ gcc [srcs] -L <libft path> -lft
 | [`int ft_isalnum(int c)`](https://github.com/pheilbron/libft/blob/master/src/ctype/ft_isalnum.c)<br/>[`int ft_isascii(int c)`](https://github.com/pheilbron/libft/blob/master/src/ctype/ft_isascii.c)<br/>[`int ft_isdigit(int c)`](https://github.com/pheilbron/libft/blob/master/src/ctype/ft_isdigit.c)<br/>[`int ft_isspace(int c)`](https://github.com/pheilbron/libft/blob/master/src/ctype/ft_isspace.c)<br/>[`int ft_isalpha(int c)`](https://github.com/pheilbron/libft/blob/master/src/ctype/ft_isalpha.c)<br/>[`int ft_isblank(int c)`](https://github.com/pheilbron/libft/blob/master/src/ctype/ft_isblank.c)<br/>[`int ft_isprint(int c)`](https://github.com/pheilbron/libft/blob/master/src/ctype/ft_isprint.c)<br/><br/>`#include "ft_ctype.h"`| The `ft_is` functions return `1` if `c` meets the critera and `0` otherwise.|
 | [`char *ft_itoa(int n)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_itoa.c)<br/>[`char *ft_lltoa(long long n)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_lltoa.c)<br/>[`char *ft_ulltoa_base(unsigned long long n, int base, int cap)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_ulltoa_base.c)<br/><br/>`#include "ft_stdlib.h"` | `ft_itoa`, `ft_lltoa`, and `ft_ulltoa_base` all return the ascii equivalent of `n`. `ft_ulltoa_base` converts `n` to base `base`, using lowercase letters if `cap` is `0` and uppercase letters otherwise. |
 | [`void *ft_memalloc(size_t size)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_memalloc.c)<br/><br/>`#include "ft_stdlib.h"` | `ft_memalloc` returns a pointer to `size` bytes of zeroed out memory. |
-| [`void *ft_memcpy(void *dst, const void *src, size_t n`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memcpy.c)<br/>[ `void *ft_memccpy(void *dst, const void *src, int c, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memccpy.c)<br/> | |
-| [`void *ft_memchr(const void *s, int c, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memchr.c)<br/> | |
-| [`int ft_memcmp(const void *s1, const void *s2, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memcmp.c)<br/> | |
-| [`void ft_memdel(void **ap)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memdel.c)<br/> | |
-| [`void *ft_memdup(const void *src, size_t size)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memdup.c)<br/>[`void *ft_memndup(const void *src, size_t len, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memndup.c)<br/> | |
-| [`void *ft_memmove(void *dst, const void *src, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memmove.c)<br/> | |
-| ft_memset
-| ft_strcat, ft_strlcat, ft_strncat
-| ft_strchr, ft_strrchr
-| ft_strclr
-| ft_strcmp, ft_strncmp
-| ft_strcpy, ft_strlcpy, ft_strncpy, ft_stpcpy, ft_stpncpy
-| ft_strdel
-| ft_strdup, ft_strndup
-| ft_strequ, ft_strnequ
-| ft_striter, ft_striteri
-| ft_strjoin
-| ft_strlen, ft_wstrlen
-| ft_strmap, ft_strmapi
-| ft_strsplit
-| ft_strstr, ft_strnstr
-| ft_strsub
-| ft_strtrim
-| ft_tolower, ft_toupper, ft_strcapitalize
+| [`void *ft_memcpy(void *dst, const void *src, size_t n`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memcpy.c)<br/>[ `void *ft_memccpy(void *dst, const void *src, int c, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memccpy.c)<br/><br/>`#include "ft_string.h" | |
+| [`void *ft_memchr(const void *s, int c, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memchr.c)<br/><br/>`#include "ft_string.h" | |
+| [`int ft_memcmp(const void *s1, const void *s2, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memcmp.c)<br/><br/>`#include "ft_string.h" | |
+| [`void ft_memdel(void **ap)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memdel.c)<br/><br/>`#include "ft_string.h" | |
+| [`void *ft_memdup(const void *src, size_t size)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memdup.c)<br/>[`void *ft_memndup(const void *src, size_t len, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memndup.c)<br/><br/>`#include "ft_string.h" | |
+| [`void *ft_memmove(void *dst, const void *src, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memmove.c)<br/><br/>`#include "ft_string.h" | |
+| [`void *ft_memset(void *b, int c, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_memset.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strcat(char *s1, char *s2)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strcat.c)<br/>[`size_t ft_strlcat(char *dst, const char *src, size_t dstsize)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strlcat.c)<br/>[`char *ft_strncat(char *s1, const char *s2, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strncat.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strchr(const char *s, int c)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strchr.c)<br/>[`char *ft_strrchr(const char *s, int c)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strrchr.c)<br/><br/>`#include "ft_string.h" | |
+| [`void ft_strclr(char *s)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strclr.c)<br/><br/>`#include "ft_string.h" | |
+| [`int ft_strcmp(const char *s1, const char *s2)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strcmp.c)<br/>[`int ft_strncmp(const char *s1, const char *s2, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strncmp.c)<br/>[`int ft_strcatcmp(const char *s1a, const char *s1b, const char *s2a, const char *s2b)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strcatcmp.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strcpy(char *dst, const char *src)(https://github.com/pheilbron/libft/blob/master/src/string/ft_strcpy.c)<br/>[`size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strlcpy.c)<br/>[`char *ft_strncpy(char *dst, const char *src, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strncpy.c)<br/>[`char *ft_stpcpy(char *dst, const char *src)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_stpcpy.c)<br/>[`char *ft_stpncpy(char *dst, const char *src, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_stpncpy.c)<br/><br/>`#include "ft_string.h" | |
+| [`void ft_strdel(char **as)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strdel.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strdup(const char *s1)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strdup.c)<br/>[`char *ft_strndup(const char *s1, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strndup.c)<br/><br/>`#include "ft_string.h" | |
+| [`int ft_strequ(char const *s1, char const *s2)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strequ.c)<br/>[`int ft_strnequ(char const *s1, char const *s2, size_t n)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strnequ.c)<br/><br/>`#include "ft_string.h" | |
+| [`void ft_striter(char *s, void (*f)(char *))`](https://github.com/pheilbron/libft/blob/master/src/string/ft_striter.c)<br/>[`void ft_striteri(char *s, void (*f)(unsigned int, char *))`](https://github.com/pheilbron/libft/blob/master/src/string/ft_striteri.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strjoin(char const *s1, char const *s2)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strjoin.c)<br/><br/>`#include "ft_string.h" | |
+| [`size_t ft_strlen(const char *s)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strlen.c)<br/>[`size_t ft_wstrlen(const wchar_t *s)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_wstrlen.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strmap(char const *s, char (*f)(char))`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strmap.c)<br/>[`char *ft_strmapi(char const *s, char (*f)(unsigned int, char))`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strmapi.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strnew(size_t size)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strnew.c)<br/><br/>`#include "ft_string.h" | |
+| [`char **ft_strsplit(char const *s, char c)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strsplit.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strstr(const char *haystack, const char *needle)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strstr.c)<br/>[`char *ft_strnstr(const char *haystack, const char *needle, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strnstr.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strsub(char const *s, unsigned int start, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strsub.c)<br/><br/>`#include "ft_string.h" | |
+| [`char *ft_strtrim(char const *s)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strtrim.c)<br/><br/>`#include "ft_string.h" | |
+| [`int ft_tolower(int c)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_tolower.c)<br/>[`int ft_toupper(int c)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_toupper.c)<br/>[`char *ft_strcapitalize(char *s)`](https://github.com/pheilbron/libft/blob/master/src/string/ft_strcapitalize.c)<br/><br/>`#include "ft_string.h" | |
 
 ### Standard I/O
 
