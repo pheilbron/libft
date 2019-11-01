@@ -8,10 +8,11 @@
 ## Usage  
 All of the `ft_printf` functions take a string `format`, followed by a series of arguments, process the format string, and either write the resulting string to out, file, or save the string in `str`. All `ft_printf` functions return the length of the string produced.
 
-The format string is comprised two kinds of data; unformatted ascii characters, which are printed as they are entered, and formatted data introduced by '%' and follows the following format:
+The format string is comprised two kinds of data; unformatted ascii characters, which are printed as they are entered, and formatted data introduced by '%' and follows the following format: <br/>
 `...%[flags][field_width].[precision][length_specifier][conversion_type]...`
-###### Flags
+##### Flags
 The following flags may be used in any combination.
+
 | Flag | Description |
 | ---- | ----------- |
 | `+` | Include the sign (`+` or `-`) for all signed conversions. A `+` overrides a space if both are given |
@@ -20,11 +21,30 @@ The following flags may be used in any combination.
 | `0` | The conversion is zero padded with zeros rather than blanks. If precision is given for a numeric conversion or the `-` flag also appears, the `0` is ignored. |
 | ` ` (a space) | A blank should be left before a positive number (or empty string) produced by a sign conversion. If the `+` flag also appears, ` ` is ignored |
 
-###### Field Width
+##### Field Width
 An optional decimal value, specifying the minimum field width. If the conversion is shorter than the field width, then it will be padded to the left (or to the right, if `-` is given) with spaces (or with `0`s if the `0` flag is given). Otherwise, the field width is ignored.
 
-###### Precision
+##### Precision
 An optional decimal value, preceded by a decimal point. 
+
+##### Length Specifier
+
+##### Conversion Type
+| Conversion | Description |
+| ---------- | ----------- |
+| `b` | Binary.<br>Description |
+| `c` | Binary.<br>Description |
+| `d` | Binary.<br>Description |
+| `f` | Binary.<br>Description |
+| `i` | Binary.<br>Description |
+| `n` | Binary.<br>Description |
+| `o` | Binary.<br>Description |
+| `p` | Binary.<br>Description |
+| `r` | Binary.<br>Description |
+| `s` | Binary.<br>Description |
+| `u` | Binary.<br>Description |
+| `x` | Binary.<br>Description |
+| `%` | Binary.<br>Description |
 
 ## Functions
 | Function | Description |
