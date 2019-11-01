@@ -49,7 +49,7 @@ An optional decimal value, preceded by a decimal point.
 ## Functions
 | Function | Description |
 | -------- | ----------- |
-| [`int ft_printf(const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/stdio/ft_printf/ft_printf.c)
-[`int ft_fprintf(int fd, const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/stdio/ft_printf/ft_fprintf.c)
-[`int ft_nsprintf(char *str, const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/stdio/ft_printf/ft_nsprintf.c)
-[`int ft_sprintf(char *str, const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/stdio/ft_printf/ft_sprintf.c)
+| [`int ft_printf(const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/stdio/ft_printf/ft_printf.c) | Print converted format string to stdout. |
+[`int ft_fprintf(int fd, const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/stdio/ft_printf/ft_fprintf.c) | Write converted format string to file with file descriptor `fd`. |
+[`int ft_nsprintf(char **str, const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/stdio/ft_printf/ft_nsprintf.c) | Save converted format string in `str`. |
+[`int ft_sprintf(char *str, const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/stdio/ft_printf/ft_sprintf.c) | Copy converted format string to `str`. If converted string is larger than `str`, behavior is undefined. |
