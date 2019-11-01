@@ -6,7 +6,7 @@
 #    By: pheilbro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/04 19:31:10 by pheilbro          #+#    #+#              #
-#    Updated: 2019/10/25 15:12:23 by pheilbro         ###   ########.fr        #
+#    Updated: 2019/10/31 21:36:16 by pheilbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ VECTOR		= ft_vect_add ft_vect_del ft_vect_resize ft_vect_new \
 DSTRING     = ft_dstr_add ft_dstr_add_nc ft_dstr_del ft_dstr_free \
 			  ft_dstr_new ft_dstr_resize ft_dstr_init ft_dstr_insert \
 			  ft_dstr_insert_nc ft_dstr_overwrite ft_dstr_release \
-			  ft_dstr_fadd ft_dstr_dump
+			  ft_dstr_addf ft_dstr_dump
 QUEUE		= ft_queue_init ft_queue_is_empty ft_queue_enqueue \
 			  ft_queue_dequeue ft_queue_peek ft_queue_push
 STACK		= ft_stack_init ft_stack_is_empty ft_stack_enqueue \
