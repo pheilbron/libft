@@ -37,13 +37,13 @@ gcc [srcs] -L <libft path> -lft
 
 | Function | Description |
 | -------- | ----------- |
-| [`int ft_atoi(const char *str)`](https://github.com/pheilbron/libft/src/stdlib/ft_atoi.c)<br/>[`int ft_atoi_end(const char *str, int *pos)`](https://github.com/pheilbron/libft/src/stdlib/ft_atoi_end.c)<br/>[`long long ft_atoll(const char *str)`](https://github.com/pheilbron/libft/src/stdlib/ft_atoll.c)<br/>`#include stdlib.h` | description |
-| ft_bzero
-| [`int get_next_line(const int fd, char **line)`]<br/>`#include stdlib.h` | description |
-| ft_isalnum, ft_isascii, ft_isdigit, ft_isspace, ft_isalpha, ft_isblank, ft_isprint
-| [`char *ft_itoa(int n)`]<br/>[`char *ft_lltoa(long long n)`]<br/>[`char *ft_ulltoa_base(unsigned long long n, int base, int cap)`]<br/>`#include stdlib.h` | description |
-| [`void *ft_memalloc(size_t size)']<br/>`#include stdlib.h` | description |
-| ft_memcpy, ft_memccpy
+| [`int ft_atoi(const char *str)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_atoi.c)<br/>[`int ft_atoi_end(const char *str, int *pos)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_atoi_end.c)<br/>[`long long ft_atoll(const char *str)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_atoll.c)<br/>`#include stdlib.h` | `ft_atoi`, `ft_atoi_end`, and `ft_atoll` all return numerical conversions on the ascii string `str`. Each function ignores the leading whitespace before accepting an optional, single sign, and then converting the remaining valid digit values until it reaches the first non-digit character. |
+| ft_bzero | |
+| [`int get_next_line(const int fd, char **line)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/get_next_line.c)<br/>`#include stdlib.h` | `get_next_line` saves a pointer to the next unread line through the next newline character, exclusive, from file with file descriptor `fd` in `line`, returning a positive value if the file isn't fully read, `0` if the file has been completely read, and a negative number for all errors. |
+| ft_isalnum, ft_isascii, ft_isdigit, ft_isspace, ft_isalpha, ft_isblank, ft_isprint | |
+| [`char *ft_itoa(int n)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_itoa.c)<br/>[`char *ft_lltoa(long long n)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_lltoa.c)<br/>[`char *ft_ulltoa_base(unsigned long long n, int base, int cap)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_ulltoa_base.c)<br/>`#include stdlib.h` | `ft_itoa`, `ft_lltoa`, and `ft_ulltoa_base` all return the ascii equivalent of `n`. `ft_ulltoa_base` converts `n` to base `base`, using lowercase letters if `cap` is `0` and uppercase letters otherwise. |
+| [`void *ft_memalloc(size_t size)`](https://github.com/pheilbron/libft/blob/master/src/stdlib/ft_memalloc.c)<br/>`#include stdlib.h` | `ft_memalloc` returns a pointer to `size` bytes of zeroed out memory. |
+| ft_memcpy, ft_memccpy | |
 | ft_memchr
 | ft_memcmp
 | ft_memdel
