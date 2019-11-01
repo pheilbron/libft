@@ -93,6 +93,8 @@ typedef struct  s_dstring
   size_t  pos;
 } t_dstring;
 ````
+| Function | Description |
+| -------- | ----------- |
 [`size_t ft_dstr_add(t_dstring *s, char *new_data, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_add.c)<br/>[`size_t ft_dstr_add_nc(t_dstring *s, char c, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_add_nc.c)<br/> | |
 [`void ft_dstr_del(t_dstring *s, size_t index)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_del.c)<br/> | |
 [`char *ft_dstr_dump(t_dstring *s)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_dump.c)<br/>
@@ -115,6 +117,8 @@ typedef struct  s_error
   char  *aux_data;
 } t_error;
 ````
+| Function | Description |
+| -------- | ----------- |
 ft_error_custom_message, ft_error_std_message
 ft_error_init
 ft_error_new
@@ -129,6 +133,8 @@ typedef struct  s_list
   struct s_list *next;
 } t_list;
 ````
+| Function | Description |
+| -------- | ----------- |
 ft_lstadd
 ft_lstdel
 ft_lstdelone
@@ -164,6 +170,8 @@ typedef struct  s_queue
   t_node  *last;
 } t_queue;
 ````
+| Function | Description |
+| -------- | ----------- |
 ft_queue_dequeue
 ft_queue_enqueue
 ft_queue_init
@@ -191,6 +199,8 @@ typedef struct  s_rb_node
   void  *content;
 } t_rb_node;
 ````
+| Function | Description |
+| -------- | ----------- |
 ft_rbtree_free
 ft_rbtree_init
 ft_rbtree_insert
@@ -206,6 +216,8 @@ typedef struct  s_stack
   int size;
 } t_stack;
 ````
+| Function | Description |
+| -------- | ----------- |
 ft_stack_del
 ft_stack_drop
 ft_stack_enqueue
@@ -226,7 +238,8 @@ typedef struct  s_vector
   int pos;
 } t_vector;
 ````
-
+| Function | Description |
+| -------- | ----------- |
 ft_vect_add
 ft_vect_del
 ft_vect_free
