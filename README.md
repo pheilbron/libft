@@ -95,17 +95,17 @@ typedef struct  s_dstring
 ````
 | Function | Description |
 | -------- | ----------- |
-[`size_t ft_dstr_add(t_dstring *s, char *new_data, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_add.c)<br/>[`size_t ft_dstr_add_nc(t_dstring *s, char c, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_add_nc.c)<br/> | |
-[`void ft_dstr_del(t_dstring *s, size_t index)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_del.c)<br/> | |
-[`char *ft_dstr_dump(t_dstring *s)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_dump.c)<br/>
-[`int ft_dstr_addf(t_dstring *s, const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_addf.c)<br/>
-ft_dstr_free
-ft_dstr_init
-ft_dstr_insert, ft_dstr_insert_nc
-ft_dstr_new
-ft_dstr_overwrite
-ft_dstr_release
-ft_dstr_resize
+[`size_t ft_dstr_add(t_dstring *s, char *new_data, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_add.c)<br/>[`size_t ft_dstr_add_nc(t_dstring *s, char c, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`int ft_dstr_addf(t_dstring *s, const char *format, ...)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_addf.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`void ft_dstr_del(t_dstring *s, size_t index)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_del.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`char *ft_dstr_dump(t_dstring *s)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_dump.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`size_t ft_dstr_free(t_dstring *s)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_free.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`t_dstring *ft_dstr_init(void)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_init.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`size_t ft_dstr_insert(t_dstring *s, char *new_data, size_t len, size_t pos)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_insert.c)<br/>[`size_t ft_dstr_insert_nc(t_dstring *s, char c, size_t len, size_t pos)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_insert_nc.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`t_dstring *ft_dstr_new(char *data, size_t len, size_t cap)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_new.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`size_t ft_dstr_overwrite(t_dstring *s, char *new_data, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_overwrite.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`char *ft_dstr_release(t_dstring *s)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_release.c)<br/><br/>`#include "ft_dstring.h"` | |
+[`t_dstring *ft_dstr_resize(t_dstring *s, size_t len)`](https://github.com/pheilbron/libft/blob/master/src/dstring/ft_dstr_resize.c)<br/><br/>`#include "ft_dstring.h"` | |
 
 #### Errors
 An error (`t_error`) is defined as:
