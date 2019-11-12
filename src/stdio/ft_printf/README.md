@@ -1,4 +1,4 @@
-# ft_printf
+# ft\_printf
 
 ### Table Of Contents
 * [Usage](#usage)
@@ -32,18 +32,17 @@ An optional decimal value, preceded by a decimal point.
 ##### Conversion Type
 | Conversion | Description |
 | ---------- | ----------- |
-| `b` | Binary.<br>Description |
-| `c` | Binary.<br>Description |
-| `d` | Binary.<br>Description |
-| `f` | Binary.<br>Description |
-| `i` | Binary.<br>Description |
-| `n` | Binary.<br>Description |
-| `o` | Binary.<br>Description |
-| `p` | Binary.<br>Description |
+| `b`, `B` | Binary<br>Description |
+| `c`, `C` | Character<br>Description |
+| `d`, `D`, `i`, `I` | Integer<br>Description |
+| `f`, `F` | Floating Point<br>Description |
+| `n` | Binary<br>Description |
+| `o`, `O` | Octal<br>Description |
+| `p`, `P` | Pointer<br>Description |
 | `r` | Binary.<br>Description |
-| `s` | Binary.<br>Description |
-| `u` | Binary.<br>Description |
-| `x` | Binary.<br>Description |
+| `s` | String<br>Description |
+| `u` | Unsigned Integer<br>Description |
+| `x`, `X` | Hexadecimal<br>Description |
 | `%` | Binary.<br>Description |
 
 ## Functions
