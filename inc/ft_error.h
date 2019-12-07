@@ -29,7 +29,7 @@ typedef struct	s_error
 }				t_error;
 
 t_error			*ft_error_init(int errno, ...);
-void			ft_error_new(t_error *e, int errno, ...);
+int				ft_error_new(t_error *e, int errno, ...);
 char			*ft_error_std_message(char *program_name, t_error e);
 void			ft_error_print_std_message(char *program_name, t_error e);
 char			*ft_error_custom_message(char *program_name, t_error e,

@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "ft_error.h"
 
-void	ft_error_new(t_error *e, int errno, ...)
+int	ft_error_new(t_error *e, int errno, ...)
 {
 	va_list ap;
 
@@ -32,4 +32,5 @@ void	ft_error_new(t_error *e, int errno, ...)
 			e->aux_data = va_arg(ap, char *);
 		va_end(ap);
 	}
+	return (e->no);
 }
